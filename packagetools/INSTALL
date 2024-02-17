@@ -1,0 +1,49 @@
+If you are reading this, you have uncrompressed the Bartender package
+to a directory.
+
+Before installing
+
+If you do not need support for the XTC trajectory format, 
+Bartender doesn't have any requirement beyond the xtb 
+program. If you do need XTC support, then the nsl library
+is needed. The also required xdrfile library is shipped
+with Bartender.
+
+Installation
+
+I'll assume the current directory is where you want to
+install Bartender. If not, move all the uncompressed files to the
+installation directory
+
+Say you your installation directory is /home/alfred/bartender
+
+Read and (if needed)  modify the bartender_config.sh file, in 
+the installation directory.  After you have done so, go 
+back to your home directory and define the required environment variables
+
+If you are using Bash:
+
+        cd
+        echo "export BTROOT=/home/alfred/bartender" >> .bashrc  
+        echo "source $BTROOT/bartender_config.sh" >> .bashrc
+ 
+If you are using zsh, the last to lines will be:
+
+        echo "export BTROOT=/home/alfred/bartender" >> .zshrc  
+        echo "source $BTROOT/bartender_config.sh" >> .zshrc
+
+
+
+After you, for Bash:
+
+        source .bashrc
+
+Or, for zsh:
+        source .zshrc
+
+Bartender should be now ready to use.
+
+The binary name is "bartender". If you need xtc-trajectory support,
+use the "bartender-xtc" binary.
+
+
