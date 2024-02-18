@@ -1,13 +1,11 @@
 module www.github.com/rmera/bartender
 
-go 1.21
-
-replace github.com/rmera/gochem => github.com/rmera/gochem v0.6.4-0.20231011225313-3a879af9b24f
+go 1.22
 
 require (
 	github.com/gonum/floats v0.0.0-20181209220543-c233463c7e82
-	github.com/rmera/gochem v0.0.0-00010101000000-000000000000
-	github.com/rmera/scu v0.1.0
+	github.com/rmera/gochem v0.7.0
+	github.com/rmera/scu v0.2.0
 	gonum.org/v1/gonum v0.8.1
 	gonum.org/v1/plot v0.7.0
 )

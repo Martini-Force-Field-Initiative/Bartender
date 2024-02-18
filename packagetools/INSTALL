@@ -25,12 +25,12 @@ If you are using Bash:
 
         cd
         echo "export BTROOT=/home/alfred/bartender" >> .bashrc  
-        echo "source $BTROOT/bartender_config.sh" >> .bashrc
+        echo "source $BTROOT/packagetools/bartender_config.sh" >> .bashrc
  
 If you are using zsh, the last to lines will be:
 
         echo "export BTROOT=/home/alfred/bartender" >> .zshrc  
-        echo "source $BTROOT/bartender_config.sh" >> .zshrc
+        echo "source $BTROOT/packagetools/bartender_config.sh" >> .zshrc
 
 
 

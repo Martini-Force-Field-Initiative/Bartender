@@ -1,1 +1,8 @@
+*.pdb
+*.xyz
+*.log
+*.trj
+*.out
 *.tgz
+pack
+bartender

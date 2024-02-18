@@ -3,11 +3,26 @@
 
 ## Install 
 
-To install the binary distribution, decompress the `tgz` file
-to some suitable directory, set the variable BTROOT to the directory
-directory resulting from the tgz decompression, and put it in the PATH the PATH.
+The instalation instructions can be found in the file
+packagetools/INSTALL in the binary distributions (Linux only)
 
-To use Bartender, you will also need the [xtb program](https://github.com/grimme-lab/xtb) from the Grimme group.
+In the latest binary distribution (1.0.0-RC1), the packagetools/INSTALL
+contains an error in the second command that needs to be issued,
+both for Bash and for Zsh. It should be:
+
+'''
+        echo "source $BTROOT/packagetools/bartender_config.sh" >> .bashrc
+'''
+
+For Bash and:
+
+'''
+        echo "source $BTROOT/packagetools/bartender_config.sh" >> .zshrc
+'''
+
+for Zsh.
+This error will be fixed in the next release candidate distribution.
+
 
 ## Bartender use
 

@@ -1,6 +1,5 @@
 github.com/ajstarks/svgo v0.0.0-20180226025133-644b8db467af h1:wVe6/Ea46ZMeNkQjjBW6xcqyQA/j5e0D6GytH95g0gQ=
 github.com/ajstarks/svgo v0.0.0-20180226025133-644b8db467af/go.mod h1:K08gAheRH3/J6wwsYMMT4xOr94bZjxIelGM0+d/wbFw=
-github.com/andybalholm/brotli v1.0.4/go.mod h1:fO7iG3H7G2nSZ7m0zPUDn85XEX2GTukHGRSepvi9Eig=
 github.com/fogleman/gg v1.2.1-0.20190220221249-0403632d5b90/go.mod h1:R/bRT+9gY/C5z7JzPU0zXsXHKM4/ayA+zqcVNZzPa1k=
 github.com/fogleman/gg v1.3.0 h1:/7zJX8F6AaYQc57WQCyN9cAIz+4bCJGO9B+dyW29am8=
 github.com/fogleman/gg v1.3.0/go.mod h1:R/bRT+9gY/C5z7JzPU0zXsXHKM4/ayA+zqcVNZzPa1k=
@@ -12,11 +11,10 @@ github.com/gonum/internal v0.0.0-20181124074243-f884aa714029 h1:8jtTdc+Nfj9AR+0s
 github.com/gonum/internal v0.0.0-20181124074243-f884aa714029/go.mod h1:Pu4dmpkhSyOzRwuXkOgAvijx4o+4YMUJJo9OvPYMkks=
 github.com/jung-kurt/gofpdf v1.0.3-0.20190309125859-24315acbbda5 h1:PJr+ZMXIecYc1Ey2zucXdR73SMBtgjPgwa31099IMv0=
 github.com/jung-kurt/gofpdf v1.0.3-0.20190309125859-24315acbbda5/go.mod h1:7Id9E/uU8ce6rXgefFLlgrJj/GYY22cpxn+r32jIOes=
-github.com/klauspost/compress v1.15.9/go.mod h1:PhcZ0MbTNciWF3rruxRgKxI5NkcHHrHUDtV4Yw2GlzU=
-github.com/rmera/gochem v0.6.4-0.20231011225313-3a879af9b24f h1:eECxvB8TBgAee0zxKHI5tzJFMg1DBnNuwTKDt9jcDLI=
-github.com/rmera/gochem v0.6.4-0.20231011225313-3a879af9b24f/go.mod h1:6GRw2/RCTYw0UfeOLAkg9M/wCGtVjrDW7yMqQTJQFn0=
-github.com/rmera/scu v0.1.0 h1:NkGZYBtL2ZOPCaL4naCFJ3JY4w+Y3Wh5XDhal8vlYWI=
-github.com/rmera/scu v0.1.0/go.mod h1:bud3+C6l94vgt3UEQwOd5Oo7tlcEwEojMw2G8C9jyJs=
+github.com/rmera/gochem v0.7.0 h1:onuQLsz9VLMRWTCJSH8GpNa8RF//U8nb/FsE6aMJEmA=
+github.com/rmera/gochem v0.7.0/go.mod h1:l1YWf1VhbI38YAh1fSLRJIsdLODmjiVIaIp8fK8Nqo4=
+github.com/rmera/scu v0.2.0 h1:cicjO2l/7vppuPfi5XQVqYjYHZA+8cWkcS+5mxD7T3U=
+github.com/rmera/scu v0.2.0/go.mod h1:bud3+C6l94vgt3UEQwOd5Oo7tlcEwEojMw2G8C9jyJs=
 github.com/skelterjohn/go.matrix v0.0.0-20130517144113-daa59528eefd h1:+ZLYzP9SYC3WU9buyb9H0l9DQxqVFOCkDG8QnNBMAlA=
 github.com/skelterjohn/go.matrix v0.0.0-20130517144113-daa59528eefd/go.mod h1:x7ui0Rh4QxcWEOgIfa3cr9q4W/wyLTDdzISxBmLVeX8=
 golang.org/x/exp v0.0.0-20180321215751-8460e604b9de/go.mod h1:CJ0aWSM057203Lf6IL+f9T1iT9GByDxfZKAQTCR3kQA=
@@ -29,7 +27,6 @@ golang.org/x/tools v0.0.0-20180525024113-a5b4c53f6e8b/go.mod h1:n7NCudcB/nEzxVGm
 golang.org/x/tools v0.0.0-20190206041539-40960b6deb8e h1:Io7mpb+aUAGF0MKxbyQ7HQl1VgB+cL6ZJZUFaFNqVV4=
 golang.org/x/tools v0.0.0-20190206041539-40960b6deb8e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
 gonum.org/v1/gonum v0.0.0-20180816165407-929014505bf4/go.mod h1:Y+Yx5eoAFn32cQvJDxZx5Dpnq+c3wtXuadVZAcxbbBo=
-gonum.org/v1/gonum v0.7.0/go.mod h1:L02bwd0sqlsvRv41G7wGWFCsVNZFv/k1xzGIxeANHGM=
 gonum.org/v1/gonum v0.8.1 h1:wGtP3yGpc5mCLOLeTeBdjeui9oZSz5De0eOjMLC/QuQ=
 gonum.org/v1/gonum v0.8.1/go.mod h1:oe/vMfY3deqTw+1EZJhuvEW2iwGF1bW9wwu7XCu0+v0=
 gonum.org/v1/netlib v0.0.0-20190313105609-8cb42192e0e0 h1:OE9mWmgKkjJyEmDAAtGMPjXu+YNeGvK9VTSHY6+Qihc=
