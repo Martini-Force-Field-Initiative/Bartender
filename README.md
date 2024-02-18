@@ -8,19 +8,18 @@ packagetools/INSTALL in the binary distributions (Linux only)
 
 In the latest binary distribution (1.0.0-RC1), the packagetools/INSTALL
 contains an error in the second command that needs to be issued,
-both for Bash and for Zsh. It should be:
+both for Bash and for Zsh. For bash, it should be:
 
-'''
-        echo "source $BTROOT/packagetools/bartender_config.sh" >> .bashrc
-'''
+```
+echo "source $BTROOT/packagetools/bartender_config.sh" >> .bashrc
+```
 
-For Bash and:
+and for Zsh:
 
-'''
-        echo "source $BTROOT/packagetools/bartender_config.sh" >> .zshrc
-'''
+```
+echo "source $BTROOT/packagetools/bartender_config.sh" >> .zshrc
+```
 
-for Zsh.
 This error will be fixed in the next release candidate distribution.
 
 
@@ -54,6 +53,7 @@ To get all the flags available and their use. We document here some of the most 
 *  `-owntraj` _filename_ Reads a trajectory (DCD, XTC, multiPDB or multiXYZ, identified from the file extension) instead of performing an xtb simulation.
 *  `-restart` Restart from a previouls xtb simulation. The xtb.trj file must be present, and it's your responsibility to ensure that the same method is used in both runs. The already run time from the previous trajectory (rounded to ps) will be discounted from the total simulation time requested. Note that this is not a "proper" restart, in that, velocities are not taken from the previous run, only coordinates.
 
+
 ## Input file format
 
 The input file has several sections. Each section is preceded by a "section header" in its own line. All section headers are written in capitalized letters. Each section comprises the lines between its section header and the next section header (excluding both). All sections need to be present, even if they contain 0 lines. The sections need to appear in the order specified here. 
@@ -84,7 +84,8 @@ Where BeadNumber is the index of the virtual site. If there are L 'actual' Marti
 
 As a check, Gromacs will produce a PDB file named Beads.pdb, containing the atomistic structure of the molecule, with each atom tagged with the index of the bead to which it belongs in the molecule identifier field. In addition, each atom's b-factor will be a number interpolated according to the ID of the bead to which it belongs, so, if the molecule is colored by b-factor, it will show in different color the atoms belonging to different beads. Atoms belonging to more than one bead will be colored according to one of them, which is left unspecified. The PDB will also show the initial position of the virtual site bead, as Uranium atoms.
 
-# "Goodenough" File
+
+## "Goodenough" File
 
 The option ```-goodenoughfile FILE``` allows the user to supply a file to indicate Bartender what are the maximum values acceptable for fitting RMSDs, and what range of values are acceptable for force constants, for each bond term type.
 
@@ -102,7 +103,3 @@ Where v1,v2,v3 and v4 are numbers (they may be floating point).
 Note that the "dihe" line containes 2 numbers for the rmsd. 
 These are both maximum values, for the simple-periodic and one for the
 Ryckaert-Bellemans function.
-
-
-
-
