@@ -54,7 +54,7 @@ func formatInts(a []int) string {
 	return strings.Join(s, ", ")
 }
 
-// fit output
+//fit output
 type fitoutput struct {
 	out    [][]string
 	levels []int
@@ -273,6 +273,7 @@ func StatAndFit(F *Funcs, typ string, beads []int, n int, inp []float64, O *Stat
 		par, R2 := F.SimplePeriodicFit(points, E)
 		if par[0] == 0 && par[1] == 0 && par[2] == 0 {
 			FO.addOut(1, fmt.Sprintf("WARNING: Periodic fit %s failed", beadstext))
+			FO.addOut(1, fmt.Sprintf("Note that the R-B fit for %s is likely still available", beadstext))
 		}
 		if par[0] < 0 {
 			FO.addOut(2, "Dihedral corrected. Was", f2s(par[0]), "became", f2s(2*math.Pi+par[0]), "Periodicity was", f2s(par[2]), "Absolute value has been taken")
@@ -384,7 +385,11 @@ func Recomendation(typ, beads string, par []*bonded, points, E []float64, prevca
 	if par[0].rmsd < g.Map(typ)["rmsd"][0] {
 		PrintV(verbo, "The fit for the", typ, beads, "seem OK.")
 		if par[0].params[1] < g.Map(typ)["k"][0] || par[0].params[1] > g.Map(typ)["k"][1] {
-			PrintV(1, "The force constant for", typ, beads, "seems strange. You may need to scale it.")
+			verbow := 1
+			if typ == "bonds" {
+				verbow = 3
+			}
+			PrintV(verbow, "The force constant for", typ, beads, "seems strange. You may need to scale it.")
 		}
 		return true, prevcall
 	}

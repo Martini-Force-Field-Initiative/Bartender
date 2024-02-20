@@ -6,23 +6,6 @@
 The instalation instructions can be found in the file
 packagetools/INSTALL in the binary distributions (Linux only)
 
-In the latest binary distribution (1.0.0-RC1), the packagetools/INSTALL
-contains an error in the second command that needs to be issued,
-both for Bash and for Zsh. For bash, it should be:
-
-```
-echo "source $BTROOT/packagetools/bartender_config.sh" >> .bashrc
-```
-
-and for Zsh:
-
-```
-echo "source $BTROOT/packagetools/bartender_config.sh" >> .zshrc
-```
-
-This error will be fixed in the next release candidate distribution.
-
-
 ## Bartender use
 
 Assuming the Bartender and xtb excecutables are in the PATH, you
@@ -80,6 +63,25 @@ Each line corresponds to a virtual site, a "fake" bead with a position that is d
 Where BeadNumber is the index of the virtual site. If there are L 'actual' Martini Beads, the first virtual site has an index of L+1. The numbering needs to agree with the position of the line in the section. Parameter1,..ParameterM is a list of M floating-point numbers corresponding to the parameters required by the function to obtain the position of the virtual site from the position of the Martini beads. GromacsFunctionNumber is the Gromacs number for the aforementioned function.
 
 
+### Sections for bonded terms. Section headers BONDS, ANGLES, DIHEDRALS, IMPROPERS
+
+In these sections the bonded terms to be parametrized are listed.
+Each of these sections contains a line per bonded term, with the beads involved in the term,
+separated by spaces. A reduced sample of these sections follows:
+
+```
+BONDS
+1,2
+2,3
+ANGLES
+1,4,5 
+1,4,6
+DIHEDRALS
+1,2,4,5
+IMPROPERS  
+3,2,1,4
+```
+
 ## "Check" file
 
 As a check, Gromacs will produce a PDB file named Beads.pdb, containing the atomistic structure of the molecule, with each atom tagged with the index of the bead to which it belongs in the molecule identifier field. In addition, each atom's b-factor will be a number interpolated according to the ID of the bead to which it belongs, so, if the molecule is colored by b-factor, it will show in different color the atoms belonging to different beads. Atoms belonging to more than one bead will be colored according to one of them, which is left unspecified. The PDB will also show the initial position of the virtual site bead, as Uranium atoms.
@@ -87,7 +89,7 @@ As a check, Gromacs will produce a PDB file named Beads.pdb, containing the atom
 
 ## "Goodenough" File
 
-The option ```-goodenoughfile FILE``` allows the user to supply a file to indicate Bartender what are the maximum values acceptable for fitting RMSDs, and what range of values are acceptable for force constants, for each bond term type.
+Though, in most cases, the default values are sufficient, The option ```-goodenoughfile FILE``` allows the user to supply a file to indicate Bartender what are the maximum values acceptable for fitting RMSDs, and what range of values are acceptable for force constants, for each bond term type.
 
 The file must be formatted as follows:
 
