@@ -1,4 +1,4 @@
-![Bartender](graphics/logo_trazo_33.png)
+![Bartender](graphics/logofinal_trazo_33.png)
 
 # Automated bonded parameters for Martini 3
 
@@ -7,13 +7,18 @@ If you use or wish to cite Bartender, please refer to the following manuscript:
 - G.P. Pereira, R. Alessandri, M. Domínguez, R. Araya-Osorio, L. Grünewald,
   L. Borges-Araújo, S. Wu, S.J. Marrink, P.C.T. Souza, R. Mera-Adasme.
   "Bartender: Martini 3 Bonded Terms via Quantum Mechanics-based Molecular Dynamics",
-  *Chemrxiv* **2024**, [10.26434/chemrxiv-2024-62kh1](https://doi.org/10.26434/chemrxiv-2024-62kh1)
+  *Chemrxiv* **2024**, [10.a26434/chemrxiv-2024-62kh1](https://doi.org/10.26434/chemrxiv-2024-62kh1)
  
 
 ## Install 
 
 The instalation instructions can be found in the file
-packagetools/INSTALL in the binary distributions (Linux only)
+packagetools/INSTALL in the binary distributions (Linux only). 
+
+It should be possible to compile Bartender 
+for other operating systems/architectures, but that 
+has not been attempted or is supported by the Bartender team.
+
 
 ## Bartender use
 
@@ -98,7 +103,7 @@ As a check, Gromacs will produce a PDB file named Beads.pdb, containing the atom
 
 ## "Goodenough" File
 
-Though, in most cases, the default values are sufficient, The option ```-goodenoughfile FILE``` allows the user to supply a file to indicate Bartender what are the maximum values acceptable for fitting RMSDs, and what range of values are acceptable for force constants, for each bond term type.
+Though, in most cases, the default values are sufficient, The option ``` -goodenoughfile FILE``` allows the user to supply a file to indicate Bartender what are the maximum values acceptable for fitting RMSDs, and what range of values are acceptable for force constants, for each bond term type.
 
 The file must be formatted as follows:
 
@@ -114,3 +119,11 @@ Where v1,v2,v3 and v4 are numbers (they may be floating point).
 Note that the "dihe" line containes 2 numbers for the rmsd. 
 These are both maximum values, for the simple-periodic and one for the
 Ryckaert-Bellemans function.
+
+### Licenses
+
+Bartender is open source, under LGPLv3.
+
+The Bartender Logo is Copyright (c) Rocio Araya employing the [Dancing Script](https://github.com/impallari/DancingScript) font by Impalary Type, under the the Open Font License. The logo is under a [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+
