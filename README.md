@@ -96,12 +96,12 @@ IMPROPERS
 3,2,1,4
 ```
 
-## "Check" file
+### "Check" file
 
 As a check, Gromacs will produce a PDB file named Beads.pdb, containing the atomistic structure of the molecule, with each atom tagged with the index of the bead to which it belongs in the molecule identifier field. In addition, each atom's b-factor will be a number interpolated according to the ID of the bead to which it belongs, so, if the molecule is colored by b-factor, it will show in different color the atoms belonging to different beads. Atoms belonging to more than one bead will be colored according to one of them, which is left unspecified. The PDB will also show the initial position of the virtual site bead, as Uranium atoms.
 
 
-## "Goodenough" File
+### "Goodenough" File
 
 Though, in most cases, the default values are sufficient, The option ``` -goodenoughfile FILE``` allows the user to supply a file to indicate Bartender what are the maximum values acceptable for fitting RMSDs, and what range of values are acceptable for force constants, for each bond term type.
 
@@ -120,10 +120,22 @@ Note that the "dihe" line containes 2 numbers for the rmsd.
 These are both maximum values, for the simple-periodic and one for the
 Ryckaert-Bellemans function.
 
+## Contributing
+
+Please avoid pull requests to this repo.
+
+Please open a Github issue for bugfixes/problems.
+Similarly, please open a Github issue for minor code problems like typo fixes.
+
+If you wish to make a larger contribution to the program, please contact the lead developer
+at rmeraa+bartender@academicos.uta.cl
+
+
+
 ### Licenses
 
 Bartender is open source, under LGPLv3.
 
-The Bartender Logo is Copyright (c) Rocio Araya employing the [Dancing Script](https://github.com/impallari/DancingScript) font by Impalary Type, under the the Open Font License. The logo is under a [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+The Bartender Logo is Copyright (c) Rocio Araya employing the [Dancing Script](https://github.com/impallari/DancingScript) font by Impallary Type, under the the Open Font License. The logo is under a [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 
