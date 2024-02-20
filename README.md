@@ -1,4 +1,6 @@
-# Bartender: Automated bonded parameters for Martini 3
+![Bartender](graphics/logo_trazo.png)
+
+# Automated bonded parameters for Martini 3
 
 If you use or wish to cite Bartender, please refer to the following manuscript:
 
