@@ -1,4 +1,4 @@
-![Bartender](graphics/logo_trazo.png)
+![Bartender](graphics/logo_trazo_33.png)
 
 # Automated bonded parameters for Martini 3
 
