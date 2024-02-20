@@ -1,5 +1,12 @@
-# Bartender: Automated parameters for Martini 3
+# Bartender: Automated bonded parameters for Martini 3
 
+If you use or wish to cite Bartender, please refer to the following manuscript:
+
+- G.P. Pereira, R. Alessandri, M. Domínguez, R. Araya-Osorio, L. Grünewald,
+  L. Borges-Araújo, S. Wu, S.J. Marrink, P.C.T. Souza, R. Mera-Adasme.
+  "Bartender: Martini 3 Bonded Terms via Quantum Mechanics-based Molecular Dynamics",
+  *Chemrxiv* **2024**, [10.26434/chemrxiv-2024-62kh1](https://doi.org/10.26434/chemrxiv-2024-62kh1)
+ 
 
 ## Install 
 
