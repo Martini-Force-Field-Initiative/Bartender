@@ -33,6 +33,25 @@ The geometry file can also be in PDB or GRO format. The Bartender input format
 is a simple way of specifying the bonded parameters to be obtained. You can find a
 sample in the directory of the distribution, under _samples/_.
 
+As output, Bartender will produce several files.
+
+1. The most important one is called **gmx_out.itp** and contains the parameters for
+the bonded terms, in Gromacs itp format.
+
+1. Before actually running the parametrization, Bartender will produce a file called **Beads.pdb**
+This file contains the atomistic structure given as an input, with the bead to which each atom belongs
+in the residue ID field of each atom's PDB line. The b-factor field will also reflect the bead number of
+each atom, interpolated from 0 to 99. Thus, if the structure is colored by b-factor, the atoms belonging to
+the same bead will appear in the same color. If an atom belongs to more than one bead, the numbers assigned
+will correspond to the first bead to which it belongs.
+
+1. Plots for each fitting showing both the fitted function and the values from the MD distribution will be written
+as PNG files. Each PNG's name contains information of the term type (dihedral, angle, etc) the function fitted (Hooke, Simple Periodic, etc) and the beads involved in the fit.
+
+1. The same data in the previous point is also written as Grace XVG files (which are basically plain text and can be easily plotted with other tools), in a directory called **xvg**
+
+### Flags
+
 The optional flags control the way Bartender behaves. Sensible defaults have been prepared so, in
 most cases, no flags are needed. Use
 
@@ -122,7 +141,6 @@ Ryckaert-Bellemans function.
 
 ## Contributing
 
-Please avoid pull requests to this repo.
 
 Please open a Github issue for bugfixes/problems.
 Similarly, please open a Github issue for minor code problems like typo fixes.
