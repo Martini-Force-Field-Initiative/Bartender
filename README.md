@@ -43,7 +43,7 @@ This file contains the atomistic structure given as an input, with the bead to w
 in the residue ID field of each atom's PDB line. The b-factor field will also reflect the bead number of
 each atom, interpolated from 0 to 99. Thus, if the structure is colored by b-factor, the atoms belonging to
 the same bead will appear in the same color. If an atom belongs to more than one bead, the numbers assigned
-will correspond to the first bead to which it belongs.
+will correspond to one of them. Virtual sites will be marked with Uranium atoms.
 
 1. Plots for each fitting showing both the fitted function and the values from the MD distribution will be written
 as PNG files. Each PNG's name contains information of the term type (dihedral, angle, etc) the function fitted (Hooke, Simple Periodic, etc) and the beads involved in the fit.
@@ -114,11 +114,6 @@ DIHEDRALS
 IMPROPERS  
 3,2,1,4
 ```
-
-### "Check" file
-
-As a check, Gromacs will produce a PDB file named Beads.pdb, containing the atomistic structure of the molecule, with each atom tagged with the index of the bead to which it belongs in the molecule identifier field. In addition, each atom's b-factor will be a number interpolated according to the ID of the bead to which it belongs, so, if the molecule is colored by b-factor, it will show in different color the atoms belonging to different beads. Atoms belonging to more than one bead will be colored according to one of them, which is left unspecified. The PDB will also show the initial position of the virtual site bead, as Uranium atoms.
-
 
 ### "Goodenough" File
 
