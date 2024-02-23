@@ -12,8 +12,12 @@ If you use or wish to cite Bartender, please refer to the following manuscript:
 
 ## Install 
 
-The instalation instructions can be found in the file
-packagetools/INSTALL in the binary distributions (Linux only). 
+First, download the **tgz** file (the binary distribution)
+of the latest [release](https://github.com/Martini-Force-Field-Initiative/Bartender/releases)
+(Linux only) and uncompress it to a directory.
+
+The installation instructions can be found in the file
+INSTALL in the uncompressed tgz.
 
 It should be possible to compile Bartender 
 for other operating systems/architectures, but that 
