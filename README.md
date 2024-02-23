@@ -8,7 +8,13 @@ If you use or wish to cite Bartender, please refer to the following manuscript:
   L. Borges-Araújo, S. Wu, S.J. Marrink, P.C.T. Souza, R. Mera-Adasme.
   "Bartender: Martini 3 Bonded Terms via Quantum Mechanics-based Molecular Dynamics",
   *Chemrxiv* **2024**, [10.a26434/chemrxiv-2024-62kh1](https://doi.org/10.26434/chemrxiv-2024-62kh1)
- 
+
+Bartender uses [xtb](https://github.com/grimme-lab/xtb). Please cite the corresponding [methods](https://xtb-docs.readthedocs.io/en/latest/xtbrelatedrefs.html#methods)
+
+## Wiki
+
+Take a look at the [wiki](https://github.com/Martini-Force-Field-Initiative/Bartender/wiki) for
+more complete documentation.
 
 ## Install 
 
