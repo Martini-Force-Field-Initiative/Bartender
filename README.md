@@ -11,10 +11,15 @@ If you use or wish to cite Bartender, please refer to the following manuscript:
 
 Bartender uses [xtb](https://github.com/grimme-lab/xtb). Please cite the corresponding [methods](https://xtb-docs.readthedocs.io/en/latest/xtbrelatedrefs.html#methods)
 
-## Wiki
+## Resources
 
 Take a look at the [wiki](https://github.com/Martini-Force-Field-Initiative/Bartender/wiki) for
 more complete documentation.
+
+For questions, ideas, or engaging the community,
+check out the [Discussions](https://github.com/Martini-Force-Field-Initiative/Bartender/discussions)
+
+If you find a problem with Bartender or its documentation, please open a [Github Issue](https://github.com/Martini-Force-Field-Initiative/Bartender/issues)
 
 ## Install 
 
@@ -150,8 +155,8 @@ Ryckaert-Bellemans function.
 Please open a Github issue for bugfixes/problems.
 Similarly, please open a Github issue for minor code problems like typo fixes.
 
-If you wish to make a larger contribution to the program, please contact the lead developer
-at rmeraa+bartender@academicos.uta.cl
+If you wish to make a larger contribution to the program, please tell us about it in the [Discussions](https://github.com/Martini-Force-Field-Initiative/Bartender/discussions)
+or contact the lead developer at rmeraa+bartender@academicos.uta.cl
 
 
 
