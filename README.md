@@ -164,6 +164,13 @@ or contact the lead developer at rmeraa+bartender@academicos.uta.cl
 
 Bartender is open source, under LGPLv3.
 
+Bartender makes extensive use of:
+
+* [goChem](www.gochem.org) Computational Chemistry library for Go.
+* [Gonum](www.gonum.org) Excellent numerical library for Go.
+
+The developers of Gonum are gratefully acknowledged.
+
 The Bartender Logo is Copyright (c) Rocio Araya employing the [Dancing Script](https://github.com/impallari/DancingScript) font by Impallary Type, under the the Open Font License. The logo is under a [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 
