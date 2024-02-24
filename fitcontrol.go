@@ -54,7 +54,7 @@ func formatInts(a []int) string {
 	return strings.Join(s, ", ")
 }
 
-//fit output
+// fit output
 type fitoutput struct {
 	out    [][]string
 	levels []int

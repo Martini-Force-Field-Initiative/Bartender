@@ -100,16 +100,16 @@ func checkDihe(index int, wanted map[string][][]int) (map[string][][]int, []bool
 	for _, v := range needed {
 		if angleSearch(v, wanted["reb"]) < 0 {
 			if angleSearch(v, wanted["angles"]) > 0 {
-				LogV(2, "Dihedral", index, "needs angle", BeadsText(v), "which is present, but as an angle. The Restricted Bending potential (ReB) could be a safer choice here")
-				LogV(2, "A ReB term it will be added, commented")
+				LogV(1, "Dihedral", index, "needs angle", BeadsText(v), "which is present, but as an angle. The Restricted Bending potential (ReB) is a safer choice here")
+				LogV(1, "A ReB term it will be added, and the harmonic angle will be commented")
 				wanted["reb"] = append(wanted["reb"], v)
-				rebcomment = append(rebcomment, true)
+				rebcomment = append(rebcomment, false)
 				continue
 			}
 			LogV(1, "WARNING: Dihedral", index, "needs angle", BeadsText(v), "but the angle is not in the input file. Will add it and continue")
 			wanted["angle"] = append(wanted["angle"], v)
 			wanted["reb"] = append(wanted["reb"], v)
-			rebcomment = append(rebcomment, true)
+			rebcomment = append(rebcomment, false)
 
 		}
 	}

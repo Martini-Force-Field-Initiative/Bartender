@@ -45,8 +45,9 @@ func PrintBonded(params map[string][]*bonded, outname string, rebcomment []bool,
 		panic("Can't create a file for the Gromacs parameters: " + err.Error())
 	}
 
-	fout.WriteString("; Topology by Bartender - www.github.com/rmera/bartender\n")
-	fout.WriteString("; Please cite the Bartender reference: XXXXXXXXXXX\n;\n")
+	fout.WriteString("; Topology by Bartender - www.github.com/Martini-Force-Field-Initiative/Bartender\n")
+	fout.WriteString("; Please cite the Bartender reference: 10.a26434/chemrxiv-2024-62kh1\n;\n")
+	fout.WriteString("; And the reference/s for the GFN methods you use: https://xtb-docs.readthedocs.io/en/latest/xtbrelatedrefs.html#methods\n;\n")
 	if len(command) > 0 {
 		fout.WriteString("; Bartender called as:\n")
 		fout.WriteString(fmt.Sprintf("; %s\n;\n", command[0]))

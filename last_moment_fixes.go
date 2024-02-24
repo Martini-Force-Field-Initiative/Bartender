@@ -57,8 +57,12 @@ func lmFixAngles(bon *bonded, prevout string, params map[string][]*bonded) strin
 
 func indihedral(a *bonded, d *bonded) bool {
 	b := a.beads
-	c := slices.Contains[[]int, int]
-	return c(d.beads, b[0]) && c(d.beads, b[1]) && c(d.beads, b[2])
+	f := func(a, b []int) bool {
+		e := slices.Equal[[]int]
+		return e(a, b) || e(a, []int{b[2], b[1], b[0]})
+	}
+
+	return f(d.beads[:3], b) || f(d.beads[1:], b)
 
 }
 
