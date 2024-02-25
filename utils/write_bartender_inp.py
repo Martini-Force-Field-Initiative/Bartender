@@ -4,6 +4,7 @@
 # python write_bartender_inp.py --ndx BENZ_oplsaaTOcg_cgbuilder.ndx         --itp BENZ_cog.itp --out BENZ_bartender.inp  
 # python write_bartender_inp.py    -n NDMBI_oplsaaTOcg_cgbuilder.ndx           -i NDMBI.itp       -o NDMBI_bartender.inp  
 # python write_bartender_inp.py --ndx TOLU_oplsaaTOcg_cgbuilder_refined.ndx --itp TOLU.itp     --out TOLU_bartender.inp  
+# python write_bartender_inp.py    -n PCRE_oplsaaTOcg_cgbuilder.ndx            -i PCRE.itp     --out PCRE_bartender.inp  
 
 
 import sys
@@ -59,7 +60,7 @@ def check_itp_line(line):
         print(f'Something is wrong - this is the troublesome line: ', line)
 
 
-def write_Bartender_inp(line,status,outfile,header_BONDS,header_ANGLES,header_DIHEDRALS):
+def write_Bartender_inp(line,status,outfile,init_BONDS,init_ANGLES,init_DIHEDRALS,init_IMPROPERS):
     """
     Writes lines according to the Bartender input file format. 
 
@@ -71,21 +72,13 @@ def write_Bartender_inp(line,status,outfile,header_BONDS,header_ANGLES,header_DI
         A string which tells in which section of the itp we are. 
     outfile: string
         Name of output file. 
-    header_BONDS: bool
-        Variable controlling whether the header for the BONDS section should be printed (True) or it has already been printed (False). 
-    header_ANGLES: bool
-        Variable controlling whether the header for the ANGLES section should be printed (True) or it has already been printed (False). 
-    header_DIHEDRALS: bool
-        Variable controlling whether the header for the DIHEDRALS section should be printed (True) or it has already been printed (False). 
+    init_BONDS/init_ANGLES/init_DIHEDRALS/init_IMPROPERS: bool
+        Variable controlling whether the header for the BONDS/ANGLES/DIHEDRALS/IMPROPERS section should be printed (True) or it has already been (False). 
 
     Returns
     --------
-    header_BONDS: bool
-        Variable controlling whether the header for the BONDS section should be printed (True) or it has already been printed (False). 
-    header_ANGLES: bool
-        Variable controlling whether the header for the ANGLES section should be printed (True) or it has already been printed (False). 
-    header_DIHEDRALS: bool
-        Variable controlling whether the header for the DIHEDRALS section should be printed (True) or it has already been printed (False). 
+    init_BONDS/init_ANGLES/init_DIHEDRALS/init_IMPROPERS: bool
+        Variable controlling whether the header for the BONDS/ANGLES/DIHEDRALS/IMPROPERS section should be printed (True) or it has already been (False). 
     """
 
     aa_indices = line.split() 
@@ -93,30 +86,37 @@ def write_Bartender_inp(line,status,outfile,header_BONDS,header_ANGLES,header_DI
     if len(aa_indices) == 0:
         pass
     elif status == 'constraints' or status == 'bonds':
-        if header_BONDS:
+        if init_BONDS:
             outfile.write(f'{aa_indices[0]},{aa_indices[1]}\n')
         else:
             outfile.write("BONDS\n")
-            header_BONDS = True 
+            init_BONDS = True 
             outfile.write(f'{aa_indices[0]},{aa_indices[1]}\n')
     elif status == 'angles':
-        if header_ANGLES:
+        if init_ANGLES:
             outfile.write(f'{aa_indices[0]},{aa_indices[1]},{aa_indices[2]}\n')
         else:
             outfile.write("ANGLES\n")
-            header_ANGLES = True 
+            init_ANGLES = True 
             outfile.write(f'{aa_indices[0]},{aa_indices[1]},{aa_indices[2]}\n')
     elif status == 'dihedrals':
-        if header_DIHEDRALS:
+        if int(aa_indices[4]) == 2:
+            if init_IMPROPERS:
+                outfile.write(f'{aa_indices[0]},{aa_indices[1]},{aa_indices[2]},{aa_indices[3]}\n')
+            else:
+                outfile.write("IMPROPERS\n")
+                init_IMPROPERS = True
+                outfile.write(f'{aa_indices[0]},{aa_indices[1]},{aa_indices[2]},{aa_indices[3]}\n')
+        elif init_DIHEDRALS:
             outfile.write(f'{aa_indices[0]},{aa_indices[1]},{aa_indices[2]},{aa_indices[3]}\n')
         else:
             outfile.write("DIHEDRALS\n")
-            header_DIHEDRALS = True 
+            init_DIHEDRALS = True 
             outfile.write(f'{aa_indices[0]},{aa_indices[1]},{aa_indices[2]},{aa_indices[3]}\n')
     else:
         pass
 
-    return header_BONDS, header_ANGLES, header_DIHEDRALS
+    return init_BONDS, init_ANGLES, init_DIHEDRALS, init_IMPROPERS
 
 
 def main(INPndx, INPitp, OUTput):
@@ -168,12 +168,13 @@ def main(INPndx, INPitp, OUTput):
         with open(INPitp, 'r') as inpfile:
            lines = inpfile.readlines()
            status = None
-           header_BONDS = False; header_ANGLES = False; header_DIHEDRALS = False
+           init_BONDS = False; init_ANGLES = False; init_DIHEDRALS = False; init_IMPROPERS = False
            for line in lines:
                if line[0] == '[':
                    status = check_itp_line(line)
                elif not line[0] == ';' and not line[0] == '#' and not line == '\n':
-                   header_BONDS, header_ANGLES, header_DIHEDRALS = write_Bartender_inp(line,status,outfile,header_BONDS,header_ANGLES,header_DIHEDRALS)
+                   init_BONDS, init_ANGLES, init_DIHEDRALS, init_IMPROPERS = write_Bartender_inp(line, status, outfile,
+                                                                                                 init_BONDS, init_ANGLES, init_DIHEDRALS, init_IMPROPERS)
     
     print(f"- DONE! Bartender input file written in {OUTput}")
 

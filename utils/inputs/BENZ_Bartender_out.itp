@@ -1,0 +1,18 @@
+; Topology by Bartender - www.github.com/rmera/bartender
+; Please cite the Bartender reference: XXXXXXXXXXX
+[bonds]
+; i j  funct    length   force.c.
+[constraints]
+; i j  funct    length  
+  1 2   1      0.288     183820.89 ; rmsd:     0.71
+  2 3   1      0.288     181520.47 ; rmsd:     0.82
+  1 3   1      0.288     187120.69 ; rmsd:     1.09
+[angles]
+; i     j       k       funct   angle   force_constant
+[angles]
+; i     j       k       funct   angle   force_constant
+; ReB
+[dihedrals]
+; i     j       k    l       funct   phase       kd    pn
+;Improper 
+; i     j       k    l       funct   angle       kd    
