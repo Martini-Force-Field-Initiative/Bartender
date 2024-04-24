@@ -1,0 +1,26 @@
+; Topology by Bartender - www.github.com/rmera/bartender
+; Please cite the Bartender reference: XXXXXXXXXXX
+;
+; Bartender called as:
+; ../../../Bartender-binaries/bartender_v10a3_20231219 -method gfnff input/ACPH_LigParGen.pdb input/ACPH_bartender.inp
+;
+[bonds]
+; i j  funct    length   force.c.
+  1 2   1      0.328     11599.75 ; rmsd:     1.04
+  1 3   1      0.321     15668.05 ; rmsd:     0.82
+[constraints]
+; i j  funct    length  
+;  1 3   1      0.321     15668.05 ; rmsd:     0.82
+  2 3   1      0.261     187033.53 ; rmsd:     0.46
+  2 4   1      0.262     187213.08 ; rmsd:     0.26
+  3 4   1      0.262     192181.44 ; rmsd:     0.29
+[angles]
+; i     j       k       funct   angle   force_constant
+[angles]
+; i     j       k       funct   angle   force_constant
+; ReB
+[dihedrals]
+; i     j       k    l       funct   phase       kd    pn
+;Improper 
+; i     j       k    l       funct   angle       kd    
+  1     2       3    4          2     180.00     71.95 ; rmsd:     1.12   

@@ -12,9 +12,9 @@ parser.add_argument('-b', '--bar-folder', required=True, type=str, help='folder 
 
 args = parser.parse_args()
 
-LIST       = args.list        # 'list_2022ATS_90mol'
-REF_FOLDER = args.ref_folder  # 'reference-COG-itps-90mol' 
-BAR_FOLDER = args.bar_folder  # 'dataset-sm30-2022ATS-90mol'
+LIST       = args.list        # e.g. "list_small_mol"
+REF_FOLDER = args.ref_folder  # e.g. "reference-COG-itp-2022ATS"
+BAR_FOLDER = args.bar_folder  # e.g. "output-Bartender-2022ATS"
 
 VERBOSE    = False
 CWD        = os.getcwd() # "~"
