@@ -2,14 +2,15 @@
 
 # Automated bonded parameters for Martini 3
 
-If you use or wish to cite Bartender, please refer to the following manuscript:
+If you use Bertender:
 
-- G.P. Pereira, R. Alessandri, M. Domínguez, R. Araya-Osorio, L. Grünewald,
+* Please cite: G.P. Pereira, R. Alessandri, M. Domínguez, R. Araya-Osorio, L. Grünewald,
   L. Borges-Araújo, S. Wu, S.J. Marrink, P.C.T. Souza, R. Mera-Adasme.
   "Bartender: Martini 3 Bonded Terms via Quantum Mechanics-based Molecular Dynamics",
-  *Chemrxiv* **2024**, [10.a26434/chemrxiv-2024-62kh1](https://doi.org/10.26434/chemrxiv-2024-62kh1)
+  *J. Chem. Theory Comput*, 2024, 20, 5763, [10.1021/acs.jctc.4c00275](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00275).
+  The preprint version for the paper can be found [here](https://doi.org/10.26434/chemrxiv-2024-62kh1).
 
-Bartender uses [xtb](https://github.com/grimme-lab/xtb). Please cite the corresponding [methods](https://xtb-docs.readthedocs.io/en/latest/xtbrelatedrefs.html#methods)
+* Bartender uses [xtb](https://github.com/grimme-lab/xtb), so please cite the GFN [method](https://xtb-docs.readthedocs.io/en/latest/xtbrelatedrefs.html#methods) you use, and the program.
 
 ## Resources
 
