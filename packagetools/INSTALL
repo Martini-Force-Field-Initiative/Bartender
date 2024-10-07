@@ -18,8 +18,13 @@ installation directory
 Say you your installation directory is /home/alfred/bartender
 
 Read and (if needed)  modify the bartender_config.sh file, in 
-the installation directory.  After you have done so, go 
-back to your home directory and define the required environment variables
+the installation directory. In particular, make sure that the number
+of threads (CPUs used, controled by OMP_NUM_THREADS and 
+MKL_NUM_THREADS) is set to the correct value for your machine.
+
+After you have done so the previous, go
+back to your home directory and define the required environment
+variables and source the script.
 
 If you are using Bash:
 

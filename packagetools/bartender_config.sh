@@ -4,8 +4,8 @@
 export XTBHOME=$BTROOT/xtb-6.6.0
 export OMP_MAX_ACTIVE_LEVELS=1
 export OMP_STACKSIZE=2G
-export OMP_NUM_THREADS=2,1 #I'm assuming 2 cores. Feel free to change this
-export MKL_NUM_THREADS=2
+#export OMP_NUM_THREADS=2,1 #Set this to your machine
+#export MKL_NUM_THREADS=2   #Same here
 ulimit -s unlimited
 source $XTBHOME/share/xtb/config_env.bash
 
