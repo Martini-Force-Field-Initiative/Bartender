@@ -46,7 +46,7 @@ func PrintBonded(params map[string][]*bonded, outname string, rebcomment []bool,
 	}
 
 	fout.WriteString("; Topology by Bartender - www.github.com/Martini-Force-Field-Initiative/Bartender\n")
-	fout.WriteString("; Please cite the Bartender reference: 10.a26434/chemrxiv-2024-62kh1\n;\n")
+	fout.WriteString("; Please cite the Bartender reference: 10.1021/acs.jctc.4c00275\n;\n")
 	fout.WriteString("; And the reference/s for the GFN methods you use: https://xtb-docs.readthedocs.io/en/latest/xtbrelatedrefs.html#methods\n;\n")
 	if len(command) > 0 {
 		fout.WriteString("; Bartender called as:\n")
