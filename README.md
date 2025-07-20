@@ -4,7 +4,7 @@
 
 If you use Bertender:
 
-* Please cite: G.P. Pereira, R. Alessandri, M. Domínguez, R. Araya-Osorio, L. Grünewald,
+* Please read and cite: G.P. Pereira, R. Alessandri, M. Domínguez, R. Araya-Osorio, L. Grünewald,
   L. Borges-Araújo, S. Wu, S.J. Marrink, P.C.T. Souza, R. Mera-Adasme.
   "Bartender: Martini 3 Bonded Terms via Quantum Mechanics-based Molecular Dynamics",
   *J. Chem. Theory Comput*, 2024, 20, 5763, [10.1021/acs.jctc.4c00275](https://pubs.acs.org/doi/10.1021/acs.jctc.4c00275).
@@ -38,6 +38,9 @@ has not been attempted or is supported by the Bartender team.
 
 ## Bartender use
 
+Please keep in mind 
+that Bartender is designed for smaller molecules such as drug candidates.
+
 Assuming the Bartender and xtb excecutables are in the PATH, you
 can use Bartender with the command:
 
@@ -47,8 +50,7 @@ bartender [flags] Geometry.xyz BartenderInput.inp
 
 The geometry file can also be in PDB or GRO format. The Bartender input format
 is a simple way of specifying the bonded parameters to be obtained. You can find a
-sample in the directory of the distribution, under _samples/_.
-
+sample in the directory of the distribution, under _samples/_. 
 As output, Bartender will produce several files.
 
 1. The most important one is called **gmx_out.itp** and contains the parameters for
